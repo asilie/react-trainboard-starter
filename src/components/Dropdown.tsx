@@ -13,7 +13,16 @@ const DropdownList = ({ title }: {title: string}) => {
         { value: 'LST', 
             label: 'London Liverpool Street (LST)' }, 
         { value: 'SSD',
-            label: 'Stansted Airport (SSD)' }];
+            label: 'Stansted Airport (SSD)' },
+        { value: 'OXF',
+            label: 'Oxford (OXF)',
+        },
+        { value: 'CBG',
+            label: 'Cambridge (CBG)',
+        },
+        { value: 'BTN',
+            label: 'Brighton (BTN)',
+        }];
        
     return (
         <div className = "label-side">

@@ -5,7 +5,7 @@ export interface dropdownOptions {
     label: string;
 }
 
-const DropdownList = ({ title, value, onChange }: {title: string; value: string; onChange: (e:any)=> void}) => {
+const DropdownList = ({ title, onChange }: {title: string; onChange: (e:any)=> void}) => {
 
     const options: dropdownOptions[] = [
         { value: 'LST', 
@@ -18,10 +18,6 @@ const DropdownList = ({ title, value, onChange }: {title: string; value: string;
             label: 'Cambridge (CBG)' },
         { value: 'BTN',
             label: 'Brighton (BTN)' }];
-
-    const defaultOption: dropdownOptions = {
-        value: 'Default', label: 'Select',
-    };
 
     const [selectedValue, setSelectedValue] = useState(options[0].value);
 

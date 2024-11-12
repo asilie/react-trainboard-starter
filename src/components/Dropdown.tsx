@@ -5,9 +5,7 @@ export interface dropdownOptions {
     label: string;
 }
 
-const DropdownList = ({ title }: {title: string}) => {
-
-    const [selectedValue, setSelectedValue] = useState('');
+const DropdownList = ({ title, value, onChange }: {title: string; value: string; onChange: (e:any)=> void}) => {
 
     const options: dropdownOptions[] = [
         { value: 'LST', 
@@ -15,21 +13,29 @@ const DropdownList = ({ title }: {title: string}) => {
         { value: 'SSD',
             label: 'Stansted Airport (SSD)' },
         { value: 'OXF',
-            label: 'Oxford (OXF)',
-        },
+            label: 'Oxford (OXF)' },
         { value: 'CBG',
-            label: 'Cambridge (CBG)',
-        },
+            label: 'Cambridge (CBG)' },
         { value: 'BTN',
-            label: 'Brighton (BTN)',
-        }];
+            label: 'Brighton (BTN)' }];
+
+    const defaultOption: dropdownOptions = {
+        value: 'Default', label: 'Select',
+    };
+
+    const [selectedValue, setSelectedValue] = useState(options[0].value);
+
+    // passes default value (LST) if dropdown is not touched by user
+    onChange(selectedValue);
        
     return (
         <div className = "label-side">
             <p> {title} </p>
             <select 
+                name = { title }
                 value = { selectedValue }
-                onChange = { (e) => setSelectedValue(e.target.value) }>
+                onChange = { (e) => {onChange(e.target.value); 
+                    setSelectedValue(e.target.value);} }>
 
                 {options.map((option) => (
                     <option key = { option.value } value = { option.value }>

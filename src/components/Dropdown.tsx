@@ -1,23 +1,9 @@
 import React, { useState } from 'react';
+import dropdownOptions from '../interfaces/dropdownOptions';
 
-export interface dropdownOptions {
-    value: string;
-    label: string;
-}
+const DropdownList = ({ title, stations, onChange }: {title: string; stations: dropdownOptions[]; onChange: (e: string)=> void}) => {
 
-const DropdownList = ({ title, onChange }: {title: string; onChange: (e:any)=> void}) => {
-
-    const options: dropdownOptions[] = [
-        { value: 'LST', 
-            label: 'London Liverpool Street (LST)' }, 
-        { value: 'SSD',
-            label: 'Stansted Airport (SSD)' },
-        { value: 'OXF',
-            label: 'Oxford (OXF)' },
-        { value: 'CBG',
-            label: 'Cambridge (CBG)' },
-        { value: 'BTN',
-            label: 'Brighton (BTN)' }];
+    const options = stations;
 
     const [selectedValue, setSelectedValue] = useState(options[0].value);
 

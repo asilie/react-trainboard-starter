@@ -1,22 +1,29 @@
-import React, { useEffect,useState } from 'react';
+import React, { FormEvent, useEffect,useState } from 'react';
 import axios from 'axios';
 import formatTimezoneOffset from '../helpers/formatTimeZoneOffset';
+import dropdownOptions from '../interfaces/dropdownOptions';
+import navigationParameters from '../interfaces/navigationParameters';
 import DropdownList from './Dropdown';
-
-interface navigationParameters {
-    departureCRS: string;
-    arrivalCRS: string;
-    time: string;
-    timeWindow: string;
-}
 
 const SubmitForm = () => {
 
     const [arrival, setArrival] = useState('');
     const [departure, setDeparture] = useState('');
     const [redirect, setRedirect] = useState(false);
+
+    const stations: dropdownOptions[] = [
+        { value: 'LST', 
+            label: 'London Liverpool Street (LST)' }, 
+        { value: 'SSD',
+            label: 'Stansted Airport (SSD)' },
+        { value: 'OXF',
+            label: 'Oxford (OXF)' },
+        { value: 'CBG',
+            label: 'Cambridge (CBG)' },
+        { value: 'BTN',
+            label: 'Brighton (BTN)' }];
   
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         alert(`Departure station ${departure} and arrival station ${arrival} submitted`);
         
         // Prevent the browser from reloading the page
@@ -51,8 +58,8 @@ const SubmitForm = () => {
    
     return (
         <form  onSubmit = { handleSubmit }>
-            <DropdownList title = { 'Departure Station :' }  onChange = { setDeparture }/> 
-            <DropdownList title = { 'Arrival Station :' }  onChange = { setArrival }/> 
+            <DropdownList title = { 'Departure Station :' } stations = { stations } onChange = { setDeparture }/> 
+            <DropdownList title = { 'Arrival Station :' }  stations = { stations } onChange = { setArrival }/> 
             <hr />
             <button type = "submit">Submit</button>
         </form>

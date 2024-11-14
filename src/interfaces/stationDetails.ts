@@ -1,5 +1,5 @@
 interface stationDetails {
-        location: stationLocation;
+        location: subStationLocation;
         facilities: {
             informationSystems?: {
                 customerHelpPoints?: customerInfo;
@@ -71,10 +71,12 @@ interface stationLocation {
     addressLines: string;
     postCode: string;}
 
+type subStationLocation = Pick<stationLocation, 'addressLines' | 'postCode'>; 
+
 interface customerInfo {
     openingTimes: string;
     locationInfo: string;
     generalInfo: string;
 }
 
-export type { stationDetails };
+export type { stationDetails, subStationLocation };

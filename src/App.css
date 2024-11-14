@@ -59,16 +59,23 @@ table tr:nth-child(even) {
   background-color: #ffffff; /* White for even rows */
 }
 
-th, td {
+th {
   padding: 10px;
   text-align: left;
   border: 1px solid #ddd;
-}
-
-th {
   background-color: #f4f4f4;
 }
 
 table tr:hover {
   background-color: #e1e1e1;
+}
+
+td {
+  word-wrap: break-word;
+  white-space: pre-wrap; /* For preserving line breaks in preformatted text */
+  max-width: 300px; /* Optional: Control the width of the cell */
+  height: auto; /* Optional: Allow height to adjust to content */
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
 }

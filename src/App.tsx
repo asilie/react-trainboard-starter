@@ -5,6 +5,7 @@ import SubmitForm from './components/Form';
 import Station from './components/Station';
 import Stations from './components/Stations';
 import Table from './components/Table';
+import { stationDetails, subStationLocation } from './interfaces/stationDetails';
 
 const App = () => {
 
@@ -22,8 +23,6 @@ const App = () => {
                     locationInfo: 'In the Main Concourse opposite the shops<br>',
                     generalInfo: 'The station will remain open until the last train departs.',
                 } } } };
-
-    console.log(Object.entries(users));
 
     return (       
         <BrowserRouter>

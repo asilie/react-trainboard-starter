@@ -1,14 +1,7 @@
 import React from 'react';
-import { stationDetails } from '../interfaces/stationDetails';
-
-interface TableProps {
-  data: stationDetails; // row in table
-}
-
-const keyMap: { [ key:string ]: string } = {
-    location: 'Location',
-    facilities: 'Facilities',
-};
+import keyMapper from '../helpers/keyFormatter';
+import ObjectToText from '../helpers/objectToText';
+import TableProps from '../interfaces/TableProps';
 
 const Table: React.FC<TableProps> = ({ data })=> {
 
@@ -19,8 +12,8 @@ const Table: React.FC<TableProps> = ({ data })=> {
             <tbody>
                 {entries.map(([key, value]) => (
                     <tr key = { key }>
-                        <td>{keyMap[key] || key}</td> {/* Use custom display name or fallback to key */}
-                        <td>{String(value)}</td>
+                        <td>{keyMapper(String(key)) || key}</td> {/* Use custom display name or fallback to key */}
+                        <td><pre>{ObjectToText(value)}</pre></td>
                     </tr>
                 ))}
             </tbody>

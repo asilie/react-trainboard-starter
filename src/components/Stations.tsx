@@ -12,8 +12,6 @@ const Stations: React.FC = () => {
             .finally(() => console.log('finally'));
     }, []);
 
-    console.log('hello world');
-
     return (
         <div>
             Stations!

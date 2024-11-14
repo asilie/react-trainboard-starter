@@ -4,25 +4,50 @@ import './App.css';
 import SubmitForm from './components/Form';
 import Station from './components/Station';
 import Stations from './components/Stations';
+import Table from './components/Table';
 
-const App = () => (
-    <BrowserRouter>
-        <div className = "App">
-            <Routes>
-                <Route path = "/stations">
-                    <Route path = ":id" element = { <Station/> }/>
+const App = () => {
+
+    const users = {
+        location: {
+            longitude: 51.53089,
+            latitude: -0.1229213,
+            addressLines: 'London Kings Cross',
+            postCode: 'N1 9AL',
+        },
+        facilities: { 
+            stationFacilities: {
+                atmMachine: {
+                    openingTimes: 'Monday to Friday: 06:00-22:00<br>Saturday: 06:00-22:00<br>Sunday: 07:45-22:00',
+                    locationInfo: 'In the Main Concourse opposite the shops<br>',
+                    generalInfo: 'The station will remain open until the last train departs.',
+                } } } };
+
+    console.log(Object.entries(users));
+
+    return (       
+        <BrowserRouter>
+            <div className = "App">
+                <Routes>
+                    <Route path = "/stations">
+                        <Route path = ":id" element = { <Station/> }/>
        
-                    <Route index element = { <Stations/> }/>
-                </Route>
-            </Routes>
-            <footer>
-                <Link to = "/stations">Stations</Link>
-            </footer>
+                        <Route index element = { <Stations/> }/>
+                    </Route>
+                </Routes>
+                <footer>
+                    <Link to = "/stations">Stations</Link>
+                </footer>
 
-            <SubmitForm />
+                <SubmitForm />
 
-        </div>
-    </BrowserRouter>
-);
+                <h1>Station Details</h1>
+                <Table data = { users }  />
+
+            </div>
+        </BrowserRouter>);
+};
 
 export default App;
+
+/**/ 

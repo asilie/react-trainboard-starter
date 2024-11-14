@@ -44,3 +44,31 @@
   align-items: center;
   gap: 1rem;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light gray for odd rows */
+}
+
+table tr:nth-child(even) {
+  background-color: #ffffff; /* White for even rows */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+table tr:hover {
+  background-color: #e1e1e1;
+}

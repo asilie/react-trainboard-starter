@@ -4,11 +4,10 @@ import './App.css';
 import FlexBoxIcons from './components/FlexBox';
 import SubmitForm from './components/Form';
 import Station from './components/Station';
+import StationDisplay from './components/StationDisplay';
 import Stations from './components/Stations';
-import Table from './components/Table';
 import dataMinimise from './helpers/dataMinimise';
 import example from './helpers/stationDetailsExample';
-import { stationDetails, subStationLocation } from './interfaces/stationDetails';
 
 const App = () => {
 
@@ -31,9 +30,8 @@ const App = () => {
                 <SubmitForm />
 
                 <h1>Station Details</h1>
+                <StationDisplay loc = { dataMinimise(users).loc } /> 
                 
-                <Table data = { users } loc = { dataMinimise(users).loc } facilitiesList = { dataMinimise(users).facilitiesList }  />
-
                 <FlexBoxIcons facilitiesList = { dataMinimise(users).facilitiesList }/>
 
             </div>

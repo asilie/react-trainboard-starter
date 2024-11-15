@@ -80,6 +80,31 @@ td {
   border: 1px solid #ddd;
 }
 
+.flex-container-station {
+  display: flex;
+  flex-wrap: wrap; /* Wraps boxes to the next line if needed */
+  gap: 16px; /* Space between boxes */
+  justify-content: center; /* Center items */
+  padding: 16px; /* Padding around the container */
+  background-color: #42c7a8; /* Light background color */
+}
+
+.flex-box-station {
+  font-weight: bold;
+  font-size: larger;
+  display: flex; /* Flexbox for icon and text inside the box */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px; /* Space between icon and text */
+  padding: 16px; /* Padding inside the box */
+  background-color: #42c7a8; /* White background for the boxes */
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: pre;
+  color: #ffffff;
+}
+
 /* Flexbox container */
 .flex-container {
   display: flex;

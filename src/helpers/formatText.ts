@@ -6,7 +6,7 @@ const formatText = (text: string, indent: string): string => {
     // Split into lines and add indentation
     return formattedText
         .split('\n')
-        .map(line => `${indent + '\t'}${line}`)  // 2 spaces of indentation per line
+        .map(line => `${indent}${line}`)  // 2 spaces of indentation per line
         .join('\n');
 };
 

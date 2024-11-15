@@ -1,4 +1,4 @@
-import { stationDetails, subStationDetails } from '../interfaces/stationDetails';
+import { stationDetails } from '../interfaces/stationDetails';
 
 const getKeysAtLevel = (obj: stationDetails, depth: number): string[] => {
     let currentLevel = obj;
@@ -15,7 +15,6 @@ const getKeysAtLevel = (obj: stationDetails, depth: number): string[] => {
             return result;
         }, {});
     }
-    console.log(Object.keys(currentLevel));
     return Object.keys(currentLevel);
 };
 

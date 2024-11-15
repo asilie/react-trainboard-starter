@@ -79,3 +79,38 @@ td {
   text-align: left;
   border: 1px solid #ddd;
 }
+
+/* Flexbox container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Wraps boxes to the next line if needed */
+  gap: 16px; /* Space between boxes */
+  justify-content: center; /* Center items */
+  padding: 16px; /* Padding around the container */
+  background-color: #f0f0f0; /* Light background color */
+}
+
+/* Individual box */
+.flex-box {
+  display: flex; /* Flexbox for icon and text inside the box */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px; /* Space between icon and text */
+  padding: 16px; /* Padding inside the box */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background for the boxes */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 200px; /* Optional: Limit width of each box */
+  text-align: center;
+}
+
+/* Icon styling */
+.icon {
+  font-size: 24px; /* Make the icon larger */
+}
+
+/* Text styling */
+.text {
+  font-size: 16px;
+  color: #333; /* Dark text color */
+}

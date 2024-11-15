@@ -22,16 +22,6 @@ const Table: React.FC<TableProps> = ({ data, loc, facilitiesList })=> {
                     ))}
                 </tr>
             </thead>
-            <tbody>
-                < tr key = { 'Facilities' }>#
-                    {facilitiesList.map((key) => (
-                        <tr key = { key }>
-                            <td>{keyMapper(String(key)) || key}</td> {/* Use custom display name or fallback to key */}
-                            <td><pre>{ObjectToText(key)}</pre></td>
-                        </tr>
-                    ))}
-                </tr>
-            </tbody>
         </table>
     );
 };

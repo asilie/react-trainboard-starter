@@ -59,7 +59,7 @@ table tr:nth-child(even) {
   background-color: #ffffff; /* White for even rows */
 }
 
-th {
+thead, th {
   padding: 10px;
   text-align: left;
   border: 1px solid #ddd;

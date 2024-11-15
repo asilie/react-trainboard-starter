@@ -1,5 +1,5 @@
 interface stationDetails {
-        location: subStationLocation;
+        location: stationLocation;
         facilities: {
             informationSystems?: {
                 customerHelpPoints?: customerInfo;
@@ -65,6 +65,8 @@ interface stationDetails {
         };
       }
 
+type subStationDetails = Omit<stationDetails, 'location'>;
+
 interface stationLocation {
     longitude: number;
     latitude: number;
@@ -79,4 +81,4 @@ interface customerInfo {
     generalInfo: string;
 }
 
-export type { stationDetails, subStationLocation };
+export type { stationDetails, subStationLocation, subStationDetails };

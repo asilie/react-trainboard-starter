@@ -5,11 +5,13 @@ import SubmitForm from './components/Form';
 import Station from './components/Station';
 import Stations from './components/Stations';
 import Table from './components/Table';
+import dataMinimise from './helpers/dataMinimise';
+import example from './helpers/stationDetailsExample';
 import { stationDetails, subStationLocation } from './interfaces/stationDetails';
 
 const App = () => {
 
-    const users = {
+    let users: stationDetails = {
         location: {
             longitude: 51.53089,
             latitude: -0.1229213,
@@ -23,6 +25,10 @@ const App = () => {
                     locationInfo: 'In the Main Concourse opposite the shops<br>',
                     generalInfo: 'The station will remain open until the last train departs.',
                 } } } };
+
+    console.log(example);
+    users = JSON.parse(example);
+    console.log(typeof users);
 
     return (       
         <BrowserRouter>
@@ -41,7 +47,8 @@ const App = () => {
                 <SubmitForm />
 
                 <h1>Station Details</h1>
-                <Table data = { users }  />
+
+                <Table data = { users } loc = { dataMinimise(users).loc } facilitiesList = { dataMinimise(users).facilitiesList }  />
 
             </div>
         </BrowserRouter>);

@@ -27,6 +27,8 @@ const App = () => {
                     <Link to = "/stations">Stations</Link>
                 </footer>
 
+                <Stations/>
+
                 <SubmitForm />
 
                 <h1 className = 'flex-box-stationDetails'><span className = "text-stationDetails">{ 'Station Details' }</span></h1>

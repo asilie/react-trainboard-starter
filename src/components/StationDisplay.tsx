@@ -8,7 +8,7 @@ const StationDisplay = ({ loc }: { loc: subStationLocation }) => {
 
     return (
         <div className = "flex-container-station">
-            
+            <h1 className = 'flex-box-station'><span className = "text-nowrap">{ 'Station Details' }</span></h1>
             <div key = { 'Location' } className = "flex-box-station">
                 <span className = "text-nowrap">{ formatText(address, '') }</span>
             </div>

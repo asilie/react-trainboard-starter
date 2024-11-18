@@ -29,7 +29,6 @@ const App = () => {
 
                 <SubmitForm />
 
-                <h1>Station Details</h1>
                 <StationDisplay loc = { dataMinimise(users).loc } /> 
                 
                 <FlexBoxIcons facilitiesList = { dataMinimise(users).facilitiesList }/>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import dropdownOptions from '../interfaces/dropdownOptions';
 
-const DropdownList = ({ title, stations, onChange }: {title: string; stations: dropdownOptions[]; onChange: (e: string)=> void}) => {
+const DropdownList = ({ title, stations, onChange }: {title: string; stations: dropdownOptions[]; onChange: (e: string) => void}) => {
 
     const options = stations;
 

@@ -1,3 +1,5 @@
+// for use with the /upcomingDepartures endpoint
+
 import React, { FormEvent, useEffect,useState } from 'react';
 import axios from 'axios';
 import formatTimezoneOffset from '../helpers/formatTimeZoneOffset';

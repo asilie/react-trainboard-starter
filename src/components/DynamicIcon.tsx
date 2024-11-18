@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import { IconBaseProps } from 'react-icons';
+import { FaNotdef } from 'react-icons/fa6';
 import iconMap from '../helpers/iconMapExample';
 import IconMap from '../interfaces/IconMap';
 
@@ -20,6 +21,8 @@ const DynamicIcon = ({ iconName, iconProps }: DynamicIcon) => {
             iconMap[iconName]().then((Icon) => {
                 setIconComponent(() => Icon);
             });
+        } else {
+            setIconComponent(() => FaNotdef);
         }
     }, [iconName]);
 

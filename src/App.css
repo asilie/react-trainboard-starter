@@ -140,3 +140,19 @@ td {
   font-size: 16px;
   color: #333; /* Dark text color */
 }
+
+.flex-box-stationDetails {
+  font-weight: bold;
+  display: flex; /* Flexbox for icon and text inside the box */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px; /* Space between icon and text */
+  padding: 16px; /* Padding inside the box */
+  background-color: #ffffff; /* White background for the boxes */
+  text-align: center;
+  justify-content: center;
+}
+
+.text-stationDetails {
+  font-size: 70px;
+  color:#42c7a8;
+}

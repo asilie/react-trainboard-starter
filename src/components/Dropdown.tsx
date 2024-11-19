@@ -18,7 +18,7 @@ const DropdownList = ({ title, stations, onChange }: {title: string; stations: d
        
     return (
         <div className = "label-side">
-            <p> {title} </p>
+            <span> {title} </span>
             <select 
                 name = { title }
                 value = { selectedValue }

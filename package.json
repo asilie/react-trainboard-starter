@@ -17,6 +17,7 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "react": "^18.2.0",
+    "react-icons": "^5.3.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
     "react-scripts": "^5.0.1",
@@ -47,7 +48,6 @@
   },
   "devDependencies": {
     "@types/loadable__component": "^5.13.9",
-    "file-loader": "^6.2.0",
-    "react-icons": "^5.3.0"
+    "file-loader": "^6.2.0"
   }
 }

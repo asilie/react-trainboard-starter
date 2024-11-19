@@ -52,7 +52,6 @@ const Stations: React.FC = () => {
         const getStations = async () => {
             try {
                 const stations = await handleStations();
-                console.log(stations);
                 setAllStations(stations);
             } catch {
                 throw new Error('Station list not found.');
@@ -60,7 +59,6 @@ const Stations: React.FC = () => {
 
         };
         getStations();
-        console.log(allStations);
     }, []);
 
     useEffect(() => {
@@ -94,10 +92,10 @@ const Stations: React.FC = () => {
 
     return (
         <form onSubmit = { handleSubmit }>
-            <div>
+            <div className = 'flex-container'>
                 <DropdownList title = { 'Choose Station :' } stations = { allStations } onChange = { setSelectedStation }/> 
             
-                <button type = "submit">Submit</button>
+                <button type = "submit" className = 'button'>Submit</button>
             </div>
             <div>
                 { Object.keys(stationDetails).length !== 0 &&

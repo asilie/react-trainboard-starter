@@ -11,7 +11,6 @@ export const fetchStationDetails = async (crs: string) => {
         const response = await axios.get(urlString, { headers: {
             'X-API-KEY': process.env.REACT_APP_X_API_KEY,
         } });
-        console.log(response.data);
         return StationDetailsSchema.parse(response.data); 
     } catch (error) {
         console.error(`An error occurred: ${error}`);

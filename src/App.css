@@ -156,3 +156,16 @@ td {
   font-size: 70px;
   color:#42c7a8;
 }
+
+.button {
+  background-color: #42c7a8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e1e1e1;
+}

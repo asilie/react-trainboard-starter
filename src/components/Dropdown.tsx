@@ -4,7 +4,6 @@ import TransformedStation from '../interfaces/dropdownOptions';
 const DropdownList = ({ title, stations, onChange }: {title: string; stations: TransformedStation[]; onChange: (e: string) => void}) => {
 
     const options = stations;
-    console.log(options);
 
     const [selectedValue, setSelectedValue] = useState(options[0].value);
 

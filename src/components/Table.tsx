@@ -1,7 +1,6 @@
 import React from 'react';
 import formatText from '../helpers/formatText';
 import keyMapper from '../helpers/keyFormatter';
-import ObjectToText from '../helpers/objectToText';
 import TableProps from '../interfaces/TableProps';
 
 const Table: React.FC<TableProps> = ({ data, loc, facilitiesList })=> {

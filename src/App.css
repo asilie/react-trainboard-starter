@@ -45,41 +45,6 @@
   gap: 1rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-table tr:nth-child(odd) {
-  background-color: #f2f2f2; /* Light gray for odd rows */
-}
-
-table tr:nth-child(even) {
-  background-color: #ffffff; /* White for even rows */
-}
-
-thead, th {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ddd;
-  background-color: #f4f4f4;
-}
-
-table tr:hover {
-  background-color: #e1e1e1;
-}
-
-td {
-  word-wrap: break-word;
-  white-space: pre-wrap; /* For preserving line breaks in preformatted text */
-  max-width: 300px; /* Optional: Control the width of the cell */
-  height: auto; /* Optional: Allow height to adjust to content */
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
 .flex-container-station {
   display: flex;
   flex-direction: column;

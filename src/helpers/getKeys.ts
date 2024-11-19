@@ -1,6 +1,6 @@
-import { stationDetails } from '../interfaces/stationDetails';
+import { StationDetails } from '../interfaces/StationDetails';
 
-const getKeysAtLevel = (obj: stationDetails, depth: number): string[] => {
+const getKeysAtLevel = (obj: StationDetails, depth: number): string[] => {
     let currentLevel = obj;
 
     for (let i = 0; i < depth; i++) {

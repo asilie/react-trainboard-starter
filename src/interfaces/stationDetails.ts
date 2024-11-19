@@ -1,84 +1,84 @@
-interface stationDetails {
-        location: stationLocation;
+interface StationDetails {
+        location: StationLocation;
         facilities: {
             informationSystems?: {
-                customerHelpPoints?: customerInfo;
-                informationAvailableFromStaff?: customerInfo;
-                departureScreens?: customerInfo;
-                arrivalScreens?: customerInfo;
-                announcements?: customerInfo;
+                customerHelpPoints?: CustomerInfo;
+                informationAvailableFromStaff?: CustomerInfo;
+                departureScreens?: CustomerInfo;
+                arrivalScreens?: CustomerInfo;
+                announcements?: CustomerInfo;
                 };
             fares?: {
-                ticketOffice?: customerInfo;
-                ticketMachine?: customerInfo;
+                ticketOffice?: CustomerInfo;
+                ticketMachine?: CustomerInfo;
                 };
             passengerServices?: {
-                customerService?: customerInfo;
-                leftLuggage?:customerInfo;
-                lostProperty?: customerInfo;
-                arrivalScreens?: customerInfo;
-                announcements?:customerInfo;
+                customerService?: CustomerInfo;
+                leftLuggage?:CustomerInfo;
+                lostProperty?: CustomerInfo;
+                arrivalScreens?: CustomerInfo;
+                announcements?:CustomerInfo;
           };
           stationFacilities?: {
-            atmMachine?: customerInfo;
-            babyChange?: customerInfo;
-            bureauDeChange?: customerInfo;
-            firstClassLounge?: customerInfo;
-            postBox?: customerInfo;
-            seatedArea?: customerInfo;
-            shops?: customerInfo;
-            showers?: customerInfo;
-            stationBuffet?: customerInfo;
-            toilets?: customerInfo;
-            touristInformation?: customerInfo;
-            trolleys?: customerInfo;
-            telephones?: customerInfo;
-            waitingRoom?: customerInfo;
-            webKiosk?: customerInfo;
-            wifi?: customerInfo;
+            atmMachine?: CustomerInfo;
+            babyChange?: CustomerInfo;
+            bureauDeChange?: CustomerInfo;
+            firstClassLounge?: CustomerInfo;
+            postBox?: CustomerInfo;
+            seatedArea?: CustomerInfo;
+            shops?: CustomerInfo;
+            showers?: CustomerInfo;
+            stationBuffet?: CustomerInfo;
+            toilets?: CustomerInfo;
+            touristInformation?: CustomerInfo;
+            trolleys?: CustomerInfo;
+            telephones?: CustomerInfo;
+            waitingRoom?: CustomerInfo;
+            webKiosk?: CustomerInfo;
+            wifi?: CustomerInfo;
           };
           accessibility?: {
-            staffHelpAvailable?: customerInfo;
-            inductionLoop?: customerInfo;
-            accessibleTicketMachines?: customerInfo;
-            heightAdjustedTicketOfficeCounter?: customerInfo;
-            rampForTrainAccess?: customerInfo;
-            accessibleTaxis?: customerInfo;
-            accessiblePublicTelephones?: customerInfo;
-            nationalKeyToilets?: customerInfo;
-            stepFreeAccess?: customerInfo;
-            ticketGates?: customerInfo;
-            impairedMobilitySetDown?: customerInfo;
-            wheelchairsAvailable?: customerInfo;
+            staffHelpAvailable?: CustomerInfo;
+            inductionLoop?: CustomerInfo;
+            accessibleTicketMachines?: CustomerInfo;
+            heightAdjustedTicketOfficeCounter?: CustomerInfo;
+            rampForTrainAccess?: CustomerInfo;
+            accessibleTaxis?: CustomerInfo;
+            accessiblePublicTelephones?: CustomerInfo;
+            nationalKeyToilets?: CustomerInfo;
+            stepFreeAccess?: CustomerInfo;
+            ticketGates?: CustomerInfo;
+            impairedMobilitySetDown?: CustomerInfo;
+            wheelchairsAvailable?: CustomerInfo;
           };
           interchange?: {
-            airport?: customerInfo;
-            carPark?: customerInfo;
-            cycleStorage?: customerInfo;
-            metroServices?: customerInfo;
-            onwardTravel?: customerInfo;
-            port?: customerInfo;
-            railReplacementServices?: customerInfo;
-            taxiRank?: customerInfo;
-            carHire?: customerInfo;
+            airport?: CustomerInfo;
+            carPark?: CustomerInfo;
+            cycleStorage?: CustomerInfo;
+            metroServices?: CustomerInfo;
+            onwardTravel?: CustomerInfo;
+            port?: CustomerInfo;
+            railReplacementServices?: CustomerInfo;
+            taxiRank?: CustomerInfo;
+            carHire?: CustomerInfo;
           };
         };
       }
 
-type subStationDetails = Omit<stationDetails, 'location'>;
+type SubStationDetails = Omit<StationDetails, 'location'>;
 
-interface stationLocation {
+interface StationLocation {
     longitude: number;
     latitude: number;
     addressLines: string;
     postCode: string;}
 
-type subStationLocation = Pick<stationLocation, 'addressLines' | 'postCode'>; 
+type SubStationLocation = Pick<StationLocation, 'addressLines' | 'postCode'>; 
 
-interface customerInfo {
+interface CustomerInfo {
     openingTimes: string;
     locationInfo: string;
     generalInfo: string;
 }
 
-export type { stationDetails, subStationLocation, subStationDetails };
+export type { StationDetails, SubStationLocation, SubStationDetails };

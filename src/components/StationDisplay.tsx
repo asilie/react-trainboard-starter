@@ -1,8 +1,8 @@
 import React from 'react';
 import formatText from '../helpers/formatText';
-import { subStationLocation } from '../interfaces/stationDetails';
+import { SubStationLocation } from '../interfaces/StationDetails';
 
-const StationDisplay = ({ loc }: { loc: subStationLocation }) => {
+const StationDisplay = ({ loc }: { loc: SubStationLocation }) => {
 
     const address = Object.values(loc).join(' ');
 

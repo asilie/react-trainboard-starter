@@ -36,3 +36,88 @@
     transform: rotate(360deg);
   }
 }
+
+.label-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-container-station {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; /* Wraps boxes to the next line if needed */
+  gap: 16px; /* Space between boxes */
+  justify-content: center; /* Center items */
+  padding: 16px; /* Padding around the container */
+  background-color: #42c7a8; /* Light background color */
+}
+
+.flex-box-station {
+  font-weight: bold;
+  font-size: larger;
+  display: flex; /* Flexbox for icon and text inside the box */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px; /* Space between icon and text */
+  padding: 16px; /* Padding inside the box */
+  background-color: #42c7a8; /* White background for the boxes */
+  text-align: center;
+}
+
+.text-nowrap {
+  white-space: pre;
+  color: #ffffff;
+}
+
+/* Flexbox container */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap; /* Wraps boxes to the next line if needed */
+  gap: 16px; /* Space between boxes */
+  justify-content: center; /* Center items */
+  padding: 16px; /* Padding around the container */
+  background-color: #f0f0f0; /* Light background color */
+}
+
+/* Individual box */
+.flex-box {
+  display: flex; /* Flexbox for icon and text inside the box */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px; /* Space between icon and text */
+  padding: 16px; /* Padding inside the box */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #fff; /* White background for the boxes */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 200px; /* Optional: Limit width of each box */
+  text-align: center;
+}
+
+/* Icon styling */
+.icon {
+  font-size: 24px; /* Make the icon larger */
+}
+
+/* Text styling */
+.text {
+  font-size: 16px;
+  color: #333; /* Dark text color */
+}
+
+.flex-box-stationDetails {
+  font-weight: bold;
+  display: flex; /* Flexbox for icon and text inside the box */
+  align-items: center; /* Align icon and text vertically */
+  gap: 8px; /* Space between icon and text */
+  padding: 16px; /* Padding inside the box */
+  background-color: #ffffff; /* White background for the boxes */
+  text-align: center;
+  justify-content: center;
+}
+
+.text-stationDetails {
+  font-size: 70px;
+  color:#42c7a8;
+}

@@ -14,6 +14,10 @@ const isKeyInObj = (key: string, obj: StationInformation): key is keyof StationI
 };
 
 const filterNonNullByProperty = (array: StationInformation[], property: string) => {
+    if (array.length === 0) {
+        return [];
+    }
+
     if (isKeyInObj(property, array[0])) {
         return array.filter(item => item[property] !== null && item[property] !== undefined);
     } else {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TransformedStation from '../interfaces/dropdownOptions';
+import TransformedStation from '../interfaces/TransformedStation';
 
 const DropdownList = ({ title, stations, onChange }: {title: string; stations: TransformedStation[]; onChange: (e: string) => void}) => {
 

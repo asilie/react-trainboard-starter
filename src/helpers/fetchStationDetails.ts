@@ -13,7 +13,14 @@ export const fetchStationDetails = async (crs: string) => {
         } });
         return StationDetailsSchema.parse(response.data); 
     } catch (error) {
-        console.error(`An error occurred: ${error}`);
+        if (axios.isAxiosError(error)) {
+            console.error(`API request failed: ${error.message}`, {
+                status: error.response?.status,
+                data: error.response?.data,
+            });
+        } else {
+            console.error('Data validation failed:', error);
+        }
         return null;
     }
    

@@ -3,7 +3,7 @@
 import React, { FormEvent, useEffect,useState } from 'react';
 import axios from 'axios';
 import formatTimezoneOffset from '../helpers/formatTimeZoneOffset';
-import dropdownOptions from '../interfaces/dropdownOptions';
+import TransformedStation from '../interfaces/TransformedStation';
 import navigationParameters from '../interfaces/navigationParameters';
 import DropdownList from './Dropdown';
 
@@ -13,7 +13,7 @@ const SubmitForm = () => {
     const [departure, setDeparture] = useState('');
     const [redirect, setRedirect] = useState(false);
 
-    const stations: dropdownOptions[] = [
+    const stations: TransformedStation[] = [
         { value: 'LST', 
             label: 'London Liverpool Street (LST)' }, 
         { value: 'SSD',

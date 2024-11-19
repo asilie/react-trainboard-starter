@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import dropdownOptions from '../interfaces/dropdownOptions';
 
 const DropdownList = ({ title, stations, onChange }: {title: string; stations: dropdownOptions[]; onChange: (e: string) => void}) => {
 
     const options = stations;
 
-    const [selectedValue, setSelectedValue] = useState(options[0].value);
+    const [selectedValue, setSelectedValue] = useState(() => {
+        if (!stations.length) {
+            return '';
+        }
+        return stations[0].value;
+    });
 
-    // passes default value (LST) if dropdown is not touched by user
-    onChange(selectedValue);
+    useEffect(() => {
+        onChange(selectedValue);
+    }, [selectedValue, onChange]);
        
     return (
         <div className = "label-side">

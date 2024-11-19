@@ -5,7 +5,7 @@ const dataMinimise = (data: StationDetails) => {
 
     if (!data || !data.location) {
         throw new Error('Invalid station details provided');
-        }
+    }
 
     const locationData: SubStationLocation = {
         addressLines: data.location.addressLines,

@@ -1,7 +1,7 @@
-import { stationDetails, subStationLocation } from './stationDetails';
+import { StationDetails, subStationLocation } from './stationDetails';
 
 interface TableProps {
-    data: stationDetails;
+    data: StationDetails;
     loc: subStationLocation;
     facilitiesList: string[]; // row in table
   }

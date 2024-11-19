@@ -1,7 +1,7 @@
-import { stationDetails, subStationLocation } from '../interfaces/stationDetails';
+import { StationDetails, subStationLocation } from '../interfaces/stationDetails';
 import getKeysAtLevel from './getKeys';
 
-const dataMinimise = (data: stationDetails) => {
+const dataMinimise = (data: StationDetails) => {
 
     const locationData: subStationLocation = {
         addressLines: data.location.addressLines,

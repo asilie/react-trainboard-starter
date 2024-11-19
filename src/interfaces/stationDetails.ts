@@ -1,4 +1,6 @@
-interface stationDetails {
+import { z } from 'zod';
+
+interface StationDetails {
         location: stationLocation;
         facilities: {
             informationSystems?: {
@@ -65,7 +67,7 @@ interface stationDetails {
         };
       }
 
-type subStationDetails = Omit<stationDetails, 'location'>;
+type subStationDetails = Omit<StationDetails, 'location'>;
 
 interface stationLocation {
     longitude: number;
@@ -76,9 +78,9 @@ interface stationLocation {
 type subStationLocation = Pick<stationLocation, 'addressLines' | 'postCode'>; 
 
 interface customerInfo {
-    openingTimes: string;
-    locationInfo: string;
-    generalInfo: string;
+    openingTimes?: string;
+    locationInfo?: string;
+    generalInfo?: string;
 }
 
-export type { stationDetails, subStationLocation, subStationDetails };
+export type { StationDetails, subStationLocation, subStationDetails };

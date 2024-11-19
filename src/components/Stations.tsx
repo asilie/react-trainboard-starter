@@ -73,9 +73,7 @@ const Stations: React.FC = () => {
 
     }, [redirect]);
 
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        alert(`Selected station ${selectedStation} submitted`);
-        
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {        
         // Prevent the browser from reloading the page
         e.preventDefault();
         setRedirect(true);

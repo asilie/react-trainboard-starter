@@ -3,8 +3,8 @@
 import React, { FormEvent, useEffect,useState } from 'react';
 import axios from 'axios';
 import formatTimezoneOffset from '../helpers/formatTimeZoneOffset';
-import TransformedStation from '../interfaces/TransformedStation';
 import navigationParameters from '../interfaces/navigationParameters';
+import TransformedStation from '../interfaces/TransformedStation';
 import DropdownList from './Dropdown';
 
 const SubmitForm = () => {

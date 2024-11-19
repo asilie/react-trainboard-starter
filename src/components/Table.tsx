@@ -7,7 +7,6 @@ import TableProps from '../interfaces/TableProps';
 const Table: React.FC<TableProps> = ({ data, loc, facilitiesList })=> {
 
     const entriesLocation = Object.entries(loc);
-    console.log(facilitiesList);
 
     return (
         <table>

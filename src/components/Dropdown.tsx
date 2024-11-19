@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import dropdownOptions from '../interfaces/dropdownOptions';
+import TransformedStation from '../interfaces/dropdownOptions';
 
-const DropdownList = ({ title, stations, onChange }: {title: string; stations: dropdownOptions[]; onChange: (e: string) => void}) => {
+const DropdownList = ({ title, stations, onChange }: {title: string; stations: TransformedStation[]; onChange: (e: string) => void}) => {
 
     const options = stations;
 
@@ -20,7 +20,7 @@ const DropdownList = ({ title, stations, onChange }: {title: string; stations: d
                     setSelectedValue(e.target.value);} }>
 
                 {options.map((option) => (
-                    <option key = { option.value } value = { option.value }>
+                    <option key = { option.label } value = { option.value }>
                         {option.label}
                     </option>
                 ))}

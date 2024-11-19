@@ -82,7 +82,7 @@ td {
 
 .flex-container-station {
   display: flex;
-  direction: column;
+  flex-direction: column;
   flex-wrap: wrap; /* Wraps boxes to the next line if needed */
   gap: 16px; /* Space between boxes */
   justify-content: center; /* Center items */

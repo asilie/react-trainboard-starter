@@ -1,6 +1,11 @@
 import { StationDetails } from '../interfaces/StationDetails';
 
 const getKeysAtLevel = (obj: StationDetails, depth: number): string[] => {
+
+    if (depth < 0) {
+        throw new Error('Depth must be a non-negative number.');
+        }
+
     let currentLevel = obj;
 
     for (let i = 0; i < depth; i++) {
